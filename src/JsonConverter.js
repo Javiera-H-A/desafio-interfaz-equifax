@@ -2,7 +2,7 @@ const fs = require('fs');
 const PATH = require('path');
 const yaml = require('js-yaml');
 
-  const ToJson = (relativePath='\\data') => {
+ const ToJson = (relativePath='\\data') => {
     let currentPath = PATH.basename(__dirname);
     let fullPath = PATH.join(currentPath,relativePath);
     let fileList = fs.readdirSync(fullPath);
@@ -14,11 +14,11 @@ const yaml = require('js-yaml');
     }
     return dic
 }
-exports.ToJson = ToJson;
+
 
 // console.log(JSON.parse(ToJson()[5])[0].config.recordClass);
 // console.log(JSON.parse(ToJson()[5])[0])
 
-// for(let i = 0; i<7; i++){
-//     console.log(JSON.parse(ToJson()[i])[0])
-// } 
+for(let i = 0; i<7; i++){
+    console.log(JSON.parse(ToJson()[i])[0].id)
+} 

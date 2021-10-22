@@ -2,9 +2,10 @@ import React from 'react';
 import '../css/AdapterForm.css'
 import { saveAs } from 'file-saver';
 import YAML from 'yaml';
+const ToJson = require('../JsonConverter');
 
 export default function AdapterForm() {
-
+  console.log(ToJson())
   const [id, setId] = React.useState('');
   const [stepName, setStepName] = React.useState('');
   const [dependencias, setDependencias] = React.useState('');
